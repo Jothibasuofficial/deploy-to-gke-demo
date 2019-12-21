@@ -1,0 +1,14 @@
+{
+    "name": "nodejs_deploy_to_gke",
+    "version": "1.0.0",
+    "description": "Auto Scaling and Deployment of Node.js application using Docker, Kubernetes, Github Actions and Google Cloud",
+    "author": "Jothibasu",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1"
+    }
+}
+  
