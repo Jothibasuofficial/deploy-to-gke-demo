@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: testApp
+  name: test-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-node
+  template:
+    metadata:
+      labels:
+        app: test-node
+    spec:
+      containers:
+      - image: gcr.io/jothibasu-demo/test-node
+        imagePullPolicy: IfNotPresent
+        name: test-node
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
